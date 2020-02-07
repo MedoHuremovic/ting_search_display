@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Ting expansion search module main file.
+ */
+
+
+
+//function ting_seo_fulltext_menu() {
+//  $items = array();
+//  $items['ting/fulltext/ajax'] = array(
+//    'title' => 'Retrieves review off the object',
+//    'page callback' => 'ting_seo_fulltext_get_review',
+//    'access arguments' => array('access content'),
+//    'type' => MENU_CALLBACK,
+//  );
+//  return $items;
+//}
+
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * It simply tells panels where to find the .inc files that define various
+ * args, contexts, content_types.
+ */
+function ting_search_display_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
